@@ -6,50 +6,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".PlayChannelActivity">
+    tools:context=".AllChannelsActivity">
 
-    <TextView
-        android:id="@+id/textview_AajTak"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview_Channel"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:gravity="center"
-        android:text="AAJ Tak"
-        android:textColor="#FFFFFF"
-        android:textSize="25sp"
-        android:background="@color/colorPrimary"
-        />
-
-    <TextView
-        android:id="@+id/textview_IndiaTv"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:gravity="center"
-        android:text="India Tv"
-        android:textSize="25sp"
-        android:textColor="#FFFFFF"
-        android:background="@color/colorPrimaryDark"
-        />
-
-    <TextView
-        android:id="@+id/textview_ABP"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:gravity="center"
-        android:text="ABP"
-        android:textSize="25sp"
-        android:textColor="#FFFFFF"
-        android:background="@color/colorPrimary"
-        />
-
-    <TextView
-        android:id="@+id/textview_zoom"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:gravity="center"
-        android:text="ABP"
-        android:textSize="25sp"
-        android:textColor="#FFFFFF"
-        android:background="@color/colorPrimary"
+        android:layout_height="wrap_content"
+        android:divider="@color/colorAccent"
+        android:scrollbars="vertical"
         />
 
 </LinearLayout>

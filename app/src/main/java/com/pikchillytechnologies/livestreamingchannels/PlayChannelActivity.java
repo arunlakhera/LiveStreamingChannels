@@ -47,10 +47,10 @@ public class PlayChannelActivity extends YouTubeBaseActivity implements YouTubeP
     public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer player, boolean wasRestored) {
 
         if (!wasRestored) {
-            //player.cueVideo("fhWaJi1Hsfo"); // Plays https://www.youtube.com/watch?v=fhWaJi1Hsfo
-            //player.cueVideo("TfHPC1DwXnI");
-            player.cueVideo(mChannelId);
-            mplayer = player;
+
+            //player.cueVideo(mChannelId);
+            player.loadVideo(mChannelId);
+            player.play();
 
         }
 
