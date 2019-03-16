@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PlayChannelActivity">
+
+    <TextView
+        android:id="@+id/textview_AajTak"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:gravity="center"
+        android:text="AAJ Tak"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        android:background="@color/colorPrimary"
+        />
+
+    <TextView
+        android:id="@+id/textview_IndiaTv"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:gravity="center"
+        android:text="India Tv"
+        android:textSize="25sp"
+        android:textColor="#FFFFFF"
+        android:background="@color/colorPrimaryDark"
+        />
+
+    <TextView
+        android:id="@+id/textview_ABP"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:gravity="center"
+        android:text="ABP"
+        android:textSize="25sp"
+        android:textColor="#FFFFFF"
+        android:background="@color/colorPrimary"
+        />
+
+    <TextView
+        android:id="@+id/textview_zoom"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:gravity="center"
+        android:text="ABP"
+        android:textSize="25sp"
+        android:textColor="#FFFFFF"
+        android:background="@color/colorPrimary"
+        />
+
+</LinearLayout>
