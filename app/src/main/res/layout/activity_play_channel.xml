@@ -6,23 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".PlayChannelActivity">
 
+    <include layout="@layout/toolbar_layout"
+        android:id="@+id/toolbar"
+        />
+
     <com.google.android.youtube.player.YouTubePlayerView
         android:id="@+id/youtube_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
         android:layout_above="@id/button_Back"
-        />
-
-    <Button
-        android:id="@+id/button_Back"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:background="@color/colorAccent"
-        android:text="Back"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
+        android:layout_below="@id/toolbar"
         />
 
 </RelativeLayout>

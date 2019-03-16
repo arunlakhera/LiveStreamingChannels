@@ -8,6 +8,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -15,6 +16,8 @@ import java.util.List;
 
 public class AllChannelsActivity extends AppCompatActivity {
 
+    private Button mButtonBack;
+    private Button mButtonMenu;
     private TextView mTextView_AajTak;
     private TextView mTextView_IndiaTv;
     private TextView mTextView_ABP;
@@ -29,9 +32,11 @@ public class AllChannelsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_channels);
 
-        mChannelModelList = new ArrayList<>();
+        mButtonBack = findViewById(R.id.button_Back);
+        mButtonMenu = findViewById(R.id.button_Menu);
         mRecyclerViewChannel = findViewById(R.id.recyclerview_Channel);
 
+        mChannelModelList = new ArrayList<>();
         mChannelAdapter = new ChannelAdadpter(getApplicationContext(),mChannelModelList);
         mRecyclerViewChannel.setHasFixedSize(true);
 
@@ -40,6 +45,7 @@ public class AllChannelsActivity extends AppCompatActivity {
 
         mRecyclerViewChannel.setItemAnimator(new DefaultItemAnimator());
         mRecyclerViewChannel.setAdapter(mChannelAdapter);
+        mButtonBack.setVisibility(View.GONE);
 
         prepareData();
 
@@ -58,6 +64,13 @@ public class AllChannelsActivity extends AppCompatActivity {
                 Log.d("LongClick","Long Click");
             }
         }));
+
+        mButtonMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
 
     }
 

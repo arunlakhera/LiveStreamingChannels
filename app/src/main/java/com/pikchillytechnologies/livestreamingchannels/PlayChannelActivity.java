@@ -13,19 +13,23 @@ import com.google.android.youtube.player.YouTubePlayerView;
 
 public class PlayChannelActivity extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener {
 
+    private Button mButtonBack;
+    private Button mButtonMenu;
+
     private static final int RECOVERY_REQUEST = 1;
     private YouTubePlayerView youTubeView;
     YouTubePlayer mplayer;
 
     private Bundle mChannelBundle;
     private String mChannelId;
-    private Button mButtonBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play_channel);
 
+        mButtonBack = findViewById(R.id.button_Back);
+        mButtonMenu = findViewById(R.id.button_Menu);
         youTubeView = (YouTubePlayerView) findViewById(R.id.youtube_view);
         mButtonBack = findViewById(R.id.button_Back);
 
@@ -41,6 +45,14 @@ public class PlayChannelActivity extends YouTubeBaseActivity implements YouTubeP
                 startActivity(destinationChannel);
             }
         });
+
+        mButtonMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
     }
 
     @Override
@@ -51,7 +63,6 @@ public class PlayChannelActivity extends YouTubeBaseActivity implements YouTubeP
             //player.cueVideo(mChannelId);
             player.loadVideo(mChannelId);
             player.play();
-
         }
 
     }

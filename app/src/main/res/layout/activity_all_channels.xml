@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,12 +8,16 @@
     android:orientation="vertical"
     tools:context=".AllChannelsActivity">
 
+    <include layout="@layout/toolbar_layout"
+        android:id="@+id/toolbar"/>
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerview_Channel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
         android:divider="@color/colorAccent"
         android:scrollbars="vertical"
         />
 
-</LinearLayout>
+</RelativeLayout>
